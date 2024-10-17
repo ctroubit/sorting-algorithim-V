@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="537.0" maxWidth="1202.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="1202.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se2203.sorting.SortingHubController">
+   <children>
+      <Button fx:id="resetButton" layoutX="718.0" layoutY="490.0" mnemonicParsing="false" onAction="#resetController" prefHeight="25.0" prefWidth="61.0" text="Reset" />
+      <Button fx:id="sortButton" layoutX="643.0" layoutY="490.0" mnemonicParsing="false" onAction="#setSortingStrategy" prefHeight="25.0" prefWidth="61.0" text="Sort" />
+      <Slider fx:id="arraySizeSlider" blockIncrement="1.0" layoutX="319.0" layoutY="490.0" majorTickUnit="1.0" max="512.0" min="32.0" minorTickCount="1" onDragDetected="#arraySizeController" onInputMethodTextChanged="#arraySizeController" onMouseClicked="#arraySizeController" onMouseDragged="#arraySizeController" pickOnBounds="false" prefHeight="25.0" prefWidth="284.0" value="64.0" />
+      <Label layoutX="254.0" layoutY="494.0" text="Array Size" />
+      <ComboBox fx:id="algoComboBox" layoutX="93.0" layoutY="490.0" prefWidth="150.0" promptText="Merge Sort" />
+      <Label layoutX="25.0" layoutY="494.0" text="Algorithm" />
+      <Label fx:id="arraySizeNumberLabel" layoutX="613.0" layoutY="494.0" text="64" />
+      <Pane fx:id="rectangleBox" layoutX="23.0" layoutY="22.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="448.0" prefWidth="1157.0" style="-fx-border-color: BLACK; -fx-background-color: #E3E2E2;" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="22.0">
+         <padding>
+            <Insets left="25.0" />
+         </padding></Pane>
+      <Label fx:id="timeLabel" layoutX="799.0" layoutY="490.0" prefHeight="25.0" prefWidth="184.0" text="Time: 0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="infoButtton" layoutX="1089.0" layoutY="490.0" mnemonicParsing="false" onAction="#showInfo" text="View Info" />
+   </children>
+</AnchorPane>
